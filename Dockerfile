@@ -11,7 +11,7 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
     echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse" >> /etc/apt/sources.list && \
     echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse" >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -qqy vim git wget tar \
+RUN apt-get update && apt-get install -qqy vim git wget tar build-essential \
 && wget -q https://studygolang.com/dl/golang/go${GOVERSION}.linux-amd64.tar.gz \
 && tar -xvf go${GOVERSION}.linux-amd64.tar.gz \
 && mv go /usr/local \
