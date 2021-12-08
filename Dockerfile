@@ -3,7 +3,7 @@ FROM jetbrains/teamcity-minimal-agent:2021.2-linux
 USER root
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV GOVERSION 1.17.2
+ENV GOVERSION 1.17.4
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
     echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse" >> /etc/apt/sources.list && \
